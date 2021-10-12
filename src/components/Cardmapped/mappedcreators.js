@@ -14,7 +14,7 @@ export const Mappedcreators = ({ featuredCreatorsdata }) => {
               title={currentele.username}
               name={currentele.username}
               profile={currentele.creator_img}
-              bio={currentele.art_price}
+              bio={currentele.bio}
             />
           );
         })}
