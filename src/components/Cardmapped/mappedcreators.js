@@ -5,7 +5,11 @@ export const Mappedcreators = ({ featuredCreatorsdata }) => {
   console.log(data);
   return (
     <div>
-      <h2>Featured creators</h2>
+      <div className="footers_">
+        <h2>Featured artworks</h2>
+        <h3>View all artworks</h3>
+      </div>
+      <hr />
       <div className="mappedcard">
         {data.map((currentele) => {
           return (

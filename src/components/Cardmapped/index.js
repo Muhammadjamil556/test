@@ -6,7 +6,6 @@ export const CardMapped = ({ featuredArtsdata }) => {
 
   return (
     <>
-      
       <div className="mappedcard">
         {data.map((currentele) => {
           return (

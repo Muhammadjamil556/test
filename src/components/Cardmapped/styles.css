@@ -4,3 +4,8 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-top: 30px;
 }
+.footers_ {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}

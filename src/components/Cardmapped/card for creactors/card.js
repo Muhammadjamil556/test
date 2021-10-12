@@ -19,7 +19,6 @@ export const Cards = (props) => {
 
         <div className="_price_auction_container">
           <div className="__container">
-            <p>Reserved price</p>
             <p>{props.bio}</p>
           </div>
           <div className="card_auction">
