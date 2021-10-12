@@ -4,10 +4,16 @@ import MainAuctionArtapi from "./api";
 import { AllApis } from "./api";
 import { Header } from "./components/Header";
 import { Homecard } from "./components/Home";
+import { Mappedcreators } from "./components/Cardmapped/mappedcreators";
+
+import { CardMapped } from "./components/Cardmapped";
 function App() {
   const [maindata, setMaindata] = useState([]);
-  const [alldata, setAlldata] = useState([]);
-
+  const [featuredArtsdata, setfeaturedArtsdata] = useState([]);
+  const [featuredCreatorsdata, setfeaturedCreatorsdata] = useState([]);
+  const [home, sethome] = useState(true);
+  const [Artworks, setArtworks] = useState(false);
+  const [creator, setcreator] = useState(false);
   useEffect(() => {
     fetcheddata();
     Allapidata();
@@ -19,13 +25,60 @@ function App() {
 
   const Allapidata = async () => {
     let value = await AllApis();
-    setAlldata(value);
+    setfeaturedArtsdata(value.featuredArts);
+    setfeaturedCreatorsdata(value.featuredCreators);
+  };
+  console.log(featuredArtsdata);
+
+  const onclickhome = () => {
+    sethome(true);
+    setArtworks(false);
+    setcreator(false);
+  };
+  const onclickart = () => {
+    sethome(false);
+    setArtworks(true);
+    setcreator(false);
+  };
+  const onclickcreators = () => {
+    sethome(false);
+    setArtworks(false);
+    setcreator(true);
   };
 
   return (
     <div className="App">
-      <Header />
-      <Homecard maindata={maindata} />
+      <Header
+        onclickhome={onclickhome}
+        onclickart={onclickart}
+        onclickcreators={onclickcreators}
+      />
+      {home ? (
+        <div>
+          <Homecard maindata={maindata} />
+          <CardMapped featuredArtsdata={featuredArtsdata} />
+          <CardMapped featuredArtsdata={featuredArtsdata} />
+
+          <Mappedcreators featuredCreatorsdata={featuredCreatorsdata} />
+        </div>
+      ) : (
+        <></>
+      )}
+      {Artworks ? (
+        <>
+          <CardMapped featuredArtsdata={featuredArtsdata} />
+          <CardMapped featuredArtsdata={featuredArtsdata} />
+        </>
+      ) : (
+        <></>
+      )}
+      {creator ? (
+        <div className className="">
+          <Mappedcreators featuredCreatorsdata={featuredCreatorsdata} />
+        </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }
