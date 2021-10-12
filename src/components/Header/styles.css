@@ -1,0 +1,39 @@
+.header__container {
+  /* display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr; */
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+.image__container {
+  display: flex;
+  cursor: pointer;
+}
+.image__container img {
+  max-width: 100px;
+  max-height: 100px;
+}
+/* .button__container {
+  display: flex;
+} */
+.menu_button {
+  margin-left: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  width: 80px;
+  height: 30px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+.connect__button {
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  height: 30px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}

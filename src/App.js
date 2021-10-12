@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import MainAuctionArtapi from "./api";
 import { AllApis } from "./api";
+import { Header } from "./components/Header";
 function App() {
   const [maindata, setMaindata] = useState([]);
   const [alldata, setAlldata] = useState([]);
@@ -21,7 +22,11 @@ function App() {
   };
   console.log(maindata);
   console.log(alldata);
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Header />
+    </div>
+  );
 }
 
 export default App;
