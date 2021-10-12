@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import MainAuctionArtapi from "./api";
+import { AllApis } from "./api";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [maindata, setMaindata] = useState([]);
+  const [alldata, setAlldata] = useState([]);
+
+  useEffect(() => {
+    fetcheddata();
+    Allapidata();
+  }, []);
+  const fetcheddata = async () => {
+    let data = await MainAuctionArtapi();
+    setMaindata([data.mainAuctionArt]);
+  };
+
+  const Allapidata = async () => {
+    let value = await AllApis();
+    setAlldata(value);
+  };
+  console.log(maindata);
+  console.log(alldata);
+  return <div className="App"></div>;
 }
 
 export default App;
