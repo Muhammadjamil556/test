@@ -57,7 +57,17 @@ function App() {
         <div>
           <Homecard maindata={maindata} />
           <CardMapped featuredArtsdata={featuredArtsdata} />
+          <div className="footers_">
+            <h2>Featured artworks</h2>
+            <h3>View all artworks</h3>
+          </div>
+          <hr />
           <CardMapped featuredArtsdata={featuredArtsdata} />
+          <div className="footers_">
+            <h2>Featured creators</h2>
+            <h3>View all creators</h3>
+          </div>
+          <hr />
 
           <Mappedcreators featuredCreatorsdata={featuredCreatorsdata} />
         </div>

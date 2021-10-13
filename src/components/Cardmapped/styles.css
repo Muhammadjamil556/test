@@ -4,8 +4,12 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-top: 30px;
 }
-.footers_ {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+
+@media screen and (max-width: 768px) {
+  .mappedcard {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    margin-top: 90px;
+  }
 }

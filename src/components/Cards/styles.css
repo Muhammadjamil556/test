@@ -52,3 +52,17 @@
 .card_auction {
   padding: 5px;
 }
+
+@media screen and (max-width: 768px) {
+  .card__container {
+    max-height: 500px;
+    margin-top: 100px;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    box-shadow: 0px 2px 4px 2px #8e8c8a87;
+    transition: transform 200ms ease-in-out;
+    border-radius: 10px;
+  }
+}
