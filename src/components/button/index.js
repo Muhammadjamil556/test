@@ -8,7 +8,7 @@ export const Button = (props) => {
       <div className="button___container">
         <button className="buttoncontainer">
           <img className="button_image" src={props.img} />
-          <h2>@{props.name}</h2>
+          <h4 className="button_title">@{props.name}</h4>
         </button>
       </div>
     </>

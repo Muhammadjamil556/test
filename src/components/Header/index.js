@@ -7,7 +7,7 @@ export const Header = (props) => {
       <div className="header__container">
         <div className="image__container">
           <img src={img1} />
-          <h1>SafeArt</h1>
+          <h1 className="header__title">SafeArt</h1>
         </div>
 
         <div className="button__container">

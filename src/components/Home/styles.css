@@ -1,22 +1,24 @@
 .containerHome {
   display: flex;
-  padding-left: 60px;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .img_container img {
   object-fit: fill;
   width: 100%;
   height: 95%;
-  max-width: 550px;
+  width: 400px;
   max-height: 450px;
-  padding: 10px;
 }
 .information__container {
   margin-left: 20px;
+  font-family: "Montserrat", Open Sans;
 }
 .title_container {
   font-size: 2.5rem;
-
+  text-transform: capitalize;
+  font-weight: bold;
   text-align: left;
 }
 .price_container {
@@ -26,6 +28,12 @@
   display: flex;
   text-align: left;
   justify-content: space-between;
+}
+.price__title {
+  font-size: 27px;
+  font-weight: 600;
+  padding-bottom: 15 px;
+  text-transform: capitalize;
 }
 .hr__tag {
   margin: 0 30px;
@@ -84,7 +92,41 @@
   text-decoration: none;
   background-color: #ffff;
 }
+.auction__footer {
+  font-size: 24px;
+  font-weight: 600 !important;
+}
 .auction__view {
   display: flex;
   justify-content: space-between;
+  font-family: "Montserrat", Open Sans;
+  padding: 0px 20px 0px;
+}
+
+@media screen and (max-width: 590px) {
+  .information__container {
+    margin: 0;
+  }
+  .img_container img {
+    object-fit: fill;
+    width: 100%;
+    height: 95%;
+    width: 300px;
+    max-height: 450px;
+  }
+  .title_container {
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    text-align: left;
+  }
+  .price_ {
+    display: none;
+  }
+  .owner__container {
+    margin: 0;
+  }
+  .auction__viewfooter {
+    padding-top: 8px;
+  }
 }

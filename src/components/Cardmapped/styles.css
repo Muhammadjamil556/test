@@ -2,14 +2,31 @@
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-top: 30px;
+  /* display: flex;
+  flex-wrap: wrap; */
 }
+/* .card__ {
+  margin-top: 30px;
+} */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1400px) {
+  .mappedcard {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 800px) {
+  .mappedcard {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 590px) {
   .mappedcard {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
-    margin-top: 90px;
   }
 }

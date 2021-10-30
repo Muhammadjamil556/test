@@ -26,3 +26,8 @@
   border-radius: 50%;
   padding-bottom: 2px;
 }
+
+.button_title {
+  font-family: "Montserrat", Open Sans;
+  font-size: 1.25rem !important;
+}

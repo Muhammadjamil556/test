@@ -20,14 +20,14 @@ export const Homecard = (props) => {
           <div className="price_container">
             <div className="price_">
               <div>
-                <h1>Reserved price</h1>
+                <p className="price__title">Reserved price</p>
                 <h1>3.000ETH</h1>
               </div>
               <hr className="hr__tag" />
             </div>
 
             <div className="owner__container">
-              <h1>Owned By</h1>
+              <p className="price__title">Owned By</p>
               <Button name={data.owner_name} img={data.owner_img} />
             </div>
           </div>
@@ -37,8 +37,8 @@ export const Homecard = (props) => {
         </div>
       </div>
       <div className="auction__view">
-        <h3> live auction</h3>
-        <h4>View all live auctions</h4>
+        <h3 className="auction__footer"> Live Auction</h3>
+        <h4 className="auction__viewfooter">View all live auctions</h4>
       </div>
       <hr />
     </>

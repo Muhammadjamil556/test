@@ -3,3 +3,17 @@
   justify-content: space-between;
   margin-top: 100px;
 }
+
+.feature__footer {
+  font-size: 24px;
+  font-weight: 600 !important;
+}
+.footers_ {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Montserrat", Open Sans;
+  padding: 0px 15px 0px;
+}
+.feature__viewfooter {
+  padding-top: 8px;
+}

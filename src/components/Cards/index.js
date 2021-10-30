@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 export const Card = (props) => {
   return (
-    <div>
+    <div className="card__outercontainer">
       <div className="card__container">
         <div className="card__imgcontainer">
           <img src={props.img} />
@@ -21,7 +21,7 @@ export const Card = (props) => {
             <p>{props.price}</p>
           </div>
           <div className="card_auction">
-            <h3>Auction ende</h3>
+            <h3>Auction end</h3>
           </div>
         </div>
       </div>
